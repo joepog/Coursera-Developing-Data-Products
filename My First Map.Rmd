@@ -1,0 +1,28 @@
+---
+title: "My First Leaflet"
+author: "Joe Pogson"
+date: "4/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Leaflet
+
+
+```{r leaflet}
+library(leaflet)
+```
+
+## Create Labels
+
+
+```{r}
+map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=45.5089, lng=-73.5880, popup = "Mount Royal Cross") %>%
+addMarkers(lat=45.5082, lng=-73.5538, popup = "Nelson's Column Montreal")
+map
+```
